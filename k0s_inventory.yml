@@ -1,0 +1,34 @@
+---
+all:
+  children:
+    initial_controller:
+      hosts:
+        k0s-1:
+    # controller:
+    #   hosts:
+    #     k0s-2:
+    #     k0s-3:
+    worker:
+      hosts:
+        k0s-2:
+        # k0s-5:
+        # k0s-6:
+        # k0s-7:
+  hosts:
+    k0s-1:
+      ansible_host: 192.168.16.242
+    k0s-2:
+      ansible_host: 192.168.16.243
+    # k0s-3:
+    #   ansible_host: 192.168.64.56
+    # k0s-4:
+    #   ansible_host: 192.168.64.57
+    # k0s-5:
+    #   ansible_host: 192.168.64.58
+    # k0s-6:
+    #   ansible_host: 192.168.64.60
+    # k0s-7:
+    #   ansible_host: 192.168.64.61
+  vars:
+    ansible_user: manish
+    k0s_version: v1.33.3+k0s.0
